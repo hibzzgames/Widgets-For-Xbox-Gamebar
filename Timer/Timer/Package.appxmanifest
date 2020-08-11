@@ -9,7 +9,7 @@
 	<Identity
 		Name="14091HibzzGames.StopwatchWidgetforXboxGamebar"
 		Publisher="CN=A930F4AF-CB3B-4CC7-AEDF-2B6626BFDF92"
-		Version="1.0.0.0" />
+		Version="1.0.1.0" />
 
 	<mp:PhoneIdentity PhoneProductId="e3a98a07-4661-447c-9526-404eb9665b7b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
