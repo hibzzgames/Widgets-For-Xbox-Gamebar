@@ -58,7 +58,7 @@ namespace Timer
 
 					// Create gamebar widget object here
 					widget = new XboxGameBarWidget( widgetArgs, Window.Current.CoreWindow, rootFrame);
-					rootFrame.Navigate(typeof(MainPage));
+					rootFrame.Navigate(typeof(MainPage), widget);
 
 					Window.Current.Closed += MainPage_Closed;
 
@@ -71,7 +71,7 @@ namespace Timer
 			}
 		}
 
-		private void MainPage_Closed(object sender, Windows.UI.Core.CoreWindowEventArgs e)
+        private void MainPage_Closed(object sender, Windows.UI.Core.CoreWindowEventArgs e)
 		{
 			widget = null;
 			Window.Current.Closed -= MainPage_Closed;
@@ -97,7 +97,6 @@ namespace Timer
 
 				if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
 				{
-					//TODO: Load state from previously suspended application
 				}
 
 				// Place the frame in the current Window
@@ -141,7 +140,6 @@ namespace Timer
 
 			widget = null;
 
-			//TODO: Save application state and stop any background activity
 			deferral.Complete();
 		}
 	}
