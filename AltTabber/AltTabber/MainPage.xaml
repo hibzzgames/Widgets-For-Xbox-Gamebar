@@ -8,7 +8,29 @@
     mc:Ignorable="d"
     Background="{ThemeResource SystemControlAcrylicElementBrush}">
 
-    <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100"> Alt Tabber</TextBlock>
-    </Grid>
+    <StackPanel VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                Orientation="Horizontal"
+                Name="MainStack">
+        <TextBlock Name="DebugText" 
+                   FontSize="10"
+                   TextWrapping="WrapWholeWords"
+                   TextAlignment="Center"
+                   Width="300"
+                   Visibility="Collapsed">
+            App Name goes here
+        </TextBlock>
+        <ScrollViewer HorizontalScrollMode="Disabled" 
+                      VerticalScrollMode="Auto"
+                      VerticalScrollBarVisibility="Auto">
+            <TextBlock Name="MainText" 
+                       FontSize="16"
+                       TextWrapping="WrapWholeWords"
+                       TextAlignment="Center"
+                       Width="300"
+                       Visibility="Visible">
+                AltTabber by hibzz.games
+            </TextBlock>
+        </ScrollViewer>
+    </StackPanel>
 </Page>

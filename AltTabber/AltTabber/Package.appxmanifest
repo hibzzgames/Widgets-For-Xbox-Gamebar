@@ -5,7 +5,8 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap uap3 mp">
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap uap3 mp rescap">
 
   <Identity
     Name="633591d1-5616-4ea8-bd0d-3843c1f67536"
@@ -58,14 +59,11 @@
 								<Size>
 									<Height>150</Height>
 									<Width>320</Width>
-									<MinHeight>100</MinHeight>
-									<MinWidth>200</MinWidth>
-									<MaxHeight>200</MaxHeight>
-									<MaxWidth>320</MaxWidth>
+									<MinWidth>320</MinWidth>
+									<MaxWidth>550</MaxWidth>
 								</Size>
 								<ResizeSupported>
 									<Horizontal>true</Horizontal>
-									<Vertical>true</Vertical>
 								</ResizeSupported>
 							</Window>
 						</GameBarWidget>
@@ -99,5 +97,6 @@
 	
   <Capabilities>
     <Capability Name="internetClient" />
+	  <rescap:Capability Name="appDiagnostics" />
   </Capabilities>
 </Package>
